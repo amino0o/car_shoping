@@ -5,6 +5,7 @@ import CustomButton from "../custom-button/custom-button.component";
 import { auth, createUserProfileDocument } from '../../firebase/firebase.utils'
 
 import './sign-up.style.scss'
+import Grid from "@material-ui/core/Grid";
 
 class SignIn extends React.Component {
     constructor() {
@@ -56,45 +57,53 @@ class SignIn extends React.Component {
     render() {
         const {displayName , email , password,confirmPassword} = this.state;
         return (
-            <div className='sign-in'>
+            <Grid item xs={6} >
                 <h2 className='title'> I do not have a account </h2>
-                <span>Sign up with your email and password</span>
+                <p>Sign up with your email and password</p>
+
                 <form className='' onSubmit={this.handleSubmit}>
-                    <FormInput
-                        type='text'
-                        name='displayName'
-                        onChange={this.handleChange}
-                        value={displayName}
-                        label='Display Name'
-                        required
-                    />
-                    <FormInput
-                        type='email'
-                        name='email'
-                        onChange={this.handleChange}
-                        value={email}
-                        label='email'
-                        required
-                    />
-                    <FormInput
-                        type='password'
-                        name='password'
-                        onChange={this.handleChange}
-                        value={password}
-                        label='password'
-                        required
-                    />
-                    <FormInput
-                        type='password'
-                        name='confirmPassword'
-                        onChange={this.handleChange}
-                        value={confirmPassword}
-                        label='confirm Password'
-                        required
-                    />
-                    <CustomButton type='submit'>Sign Up</CustomButton>
+                    <Grid container spacing={3}>
+                        <FormInput
+                            type='text'
+                            name='displayName'
+                            label='Display Name'
+                            onChange={this.handleChange}
+                            value={displayName}
+                            fullWidth
+
+                            required
+                        />
+                        <FormInput
+                            type='email'
+                            name='email'
+                            label='email'
+                            onChange={this.handleChange}
+                            value={email}
+                            fullWidth
+                            required
+                        />
+                        <FormInput
+                            type='password'
+                            name='password'
+                            onChange={this.handleChange}
+                            value={password}
+                            label='password'
+                            fullWidth
+                            required
+                        />
+                        <FormInput
+                            type='password'
+                            name='confirmPassword'
+                            onChange={this.handleChange}
+                            value={confirmPassword}
+                            label='confirm Password'
+                            fullWidth
+                            required
+                        />
+                        <CustomButton type='submit'>Sign Up</CustomButton>
+                    </Grid>
                 </form>
-            </div>
+            </Grid>
         )
     }
 }

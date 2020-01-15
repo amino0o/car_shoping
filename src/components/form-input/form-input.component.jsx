@@ -1,20 +1,20 @@
 import React from 'react'
-import './form-input.style.scss'
+// import './form-input.style.scss'
+import Grid from '@material-ui/core/Grid'
+import TextField from '@material-ui/core/TextField';
 
+const FormInput = ({handleChange ,xs , label , ...otherProps}) => (
 
-const FormInput = ({handleChange , label , ...otherProps}) => (
-
-    <div className='group'>
-        <input className='form-input' onChange={handleChange} {...otherProps}/>
-        {
-            label ? (
-                <label className={`${ otherProps.value.length ? 'shrink' : '' } form-input-label`}>
-                    {label}
-                </label>
-            )
-
-            : null}
-    </div>
+    <Grid container item xs={
+        xs ? xs : '12'
+    }>
+        <TextField
+            label={label}
+            onChange={handleChange}
+            variant="standard"
+            {...otherProps}
+         />
+    </Grid>
 
 );
 
