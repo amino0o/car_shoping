@@ -1,11 +1,11 @@
 import React from "react";
 import Contact from '../../components/contact/contact.component'
-import Container from "@material-ui/core/Container";
+import {Grid} from "@material-ui/core";
 
 const ContactPage = ()=> (
-    <Container container maxWidth='md' >
+    <Grid container maxWidth='md' >
         <Contact />
-    </Container>
+    </Grid>
 )
 
 export default ContactPage

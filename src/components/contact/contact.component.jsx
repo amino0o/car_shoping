@@ -3,7 +3,6 @@ import React from "react";
 import FormInput from '../form-input/form-input.component'
 import CustomButton from '../custom-button/custom-button.component'
 import Grid from "@material-ui/core/Grid";
-import Container from "@material-ui/core/Container";
 
 class Contact extends React.Component{
     constructor(props){
@@ -14,7 +13,6 @@ class Contact extends React.Component{
             description : '',
             email: ''
         }
-
     }
 
     handleChange = event =>{

@@ -57,12 +57,12 @@ class SignIn extends React.Component {
     render() {
         const {displayName , email , password,confirmPassword} = this.state;
         return (
-            <Grid item xs={6} >
+            <Grid item md={6} xs={12} >
                 <h2 className='title'> I do not have a account </h2>
                 <p>Sign up with your email and password</p>
 
                 <form className='' onSubmit={this.handleSubmit}>
-                    <Grid container spacing={3}>
+                    <Grid container={true} spacing={3}>
                         <FormInput
                             type='text'
                             name='displayName'

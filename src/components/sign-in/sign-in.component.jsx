@@ -17,7 +17,6 @@ class SignIn extends React.Component {
 
     handleSubmit = async e => {
         e.preventDefault();
-
         const{email , password} = this.state
         
         try{
@@ -36,7 +35,7 @@ class SignIn extends React.Component {
 
     render() {
         return (
-            <Grid item xs={6} >
+            <Grid item md={6} xs={12} >
                 <h2 className='title'> I already have a account </h2>
                 <p>Sign in with your email and password</p>
 
@@ -63,7 +62,7 @@ class SignIn extends React.Component {
                         />
 
                         <CustomButton type='submit' value='submit' xs={6} >Sign In</CustomButton>
-                        <CustomButton onClick={signInWithGoogle} isGoogleSignIn xs={6}>
+                        <CustomButton onClick={signInWithGoogle} isGoogleSignIn xs={6} >
                             {' '}Sign In with Google{' '}
                         </CustomButton>
                     </Grid>
