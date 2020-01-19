@@ -49,6 +49,7 @@ class SignIn extends React.Component {
                             value={this.state.email}
                             fullWidth
                             required
+                            xs
                         />
 
                         <FormInput
@@ -59,6 +60,7 @@ class SignIn extends React.Component {
                             value={this.state.password}
                             fullWidth
                             required
+                            xs
                         />
 
                         <CustomButton type='submit' value='submit' xs={6} >Sign In</CustomButton>
@@ -70,7 +72,6 @@ class SignIn extends React.Component {
             </Grid>
         )
     }
-
 }
 
 export default SignIn

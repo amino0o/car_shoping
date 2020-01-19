@@ -70,7 +70,7 @@ class SignIn extends React.Component {
                             onChange={this.handleChange}
                             value={displayName}
                             fullWidth
-
+                            xs
                             required
                         />
                         <FormInput
@@ -80,6 +80,7 @@ class SignIn extends React.Component {
                             onChange={this.handleChange}
                             value={email}
                             fullWidth
+                            xs
                             required
                         />
                         <FormInput
@@ -89,6 +90,7 @@ class SignIn extends React.Component {
                             value={password}
                             label='password'
                             fullWidth
+                            xs
                             required
                         />
                         <FormInput
@@ -98,9 +100,10 @@ class SignIn extends React.Component {
                             value={confirmPassword}
                             label='confirm Password'
                             fullWidth
+                            xs
                             required
                         />
-                        <CustomButton type='submit'>Sign Up</CustomButton>
+                        <CustomButton type='submit' xs={6}>Sign Up</CustomButton>
                     </Grid>
                 </form>
             </Grid>

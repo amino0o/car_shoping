@@ -6,7 +6,7 @@ import TextField from '@material-ui/core/TextField';
 const FormInput = ({handleChange ,xs , label , ...otherProps}) => (
 
     <Grid container item xs={
-        xs ? xs : '12'
+        xs ? "auto" : '12'
     }>
         <TextField
             label={label}
